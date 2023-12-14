@@ -30,7 +30,7 @@ public class UserController {
     @GetMapping
     @Operation(summary = "Gets all the Users")
     ResponseEntity<APIResponse<List<UserDTO>>> getUsers(){
-        APIResponse<List<UserDTO>> response = userService.getUsers();
+        APIResponse<List<UserDTO>> response = userService.getAllUsers();
         return ResponseEntity.status(response.getHttpStatus()).body(response);
     }
 
